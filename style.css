@@ -5,3 +5,23 @@ h1{
     text-align: center;
     color: rgb(3, 0, 0);
 }
+
+.partido {
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-size: 40px;
+    font-style: bold;
+}
+
+.resultado{
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-size: 40px;
+    font-style: bold;
+}
+
+.ganador{    
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-size: 40px;
+    font-style: bold;}

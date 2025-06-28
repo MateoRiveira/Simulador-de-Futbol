@@ -158,6 +158,11 @@ let golesB = 0;
 // Duración del partido en "turnos"
 const duracion = 90; //90 minutos
 
+let partido = document.getElementById("partido");
+
+partido.innerHTML =`⚽ Partido entre: ${equipoA} vs ${equipoB}`
+
+
 
 // Función para simular si un equipo marca un gol en un turno
 function intentoGol() {
@@ -166,7 +171,7 @@ function intentoGol() {
 }
 
 // Simulación del partido
-for (let minuto = 1; minuto <= duracion; minuto++) {
+  for (let minuto = 1; minuto <= duracion; minuto++) {
 
   // Equipo A intenta
   if (intentoGol()) {
@@ -180,23 +185,30 @@ for (let minuto = 1; minuto <= duracion; minuto++) {
     console.log(`¡Gol para ${equipoB} en el minuto ${minuto}!`);
   }
 
-  if(golesA == golesA && minuto == 90) {
-    
-  }
-
-
 }
- 
+
+
 
 
 // Resultado final
 console.log(`Resultado final: ${equipoA} ${golesA} - ${golesB} ${equipoB}`);
 
-  
+let resultadofinal = document.getElementById("resultado");
+resultadofinal.innerHTML = `Resultado final: ${equipoA} ${golesA} - ${golesB} ${equipoB}`
+
 if (golesA > golesB) {
     console.log(`🏆 Ganador: ${equipoA}`);
   } else if (golesB > golesA) {
     console.log(`🏆 Ganador: ${equipoB}`);
   } else {
     console.log("🤝 ¡Empate!");
+  }
+
+let ganador = document.getElementById("ganador");
+if(golesA > golesB) {
+  ganador.innerHTML = `🏆 Ganador: ${equipoA}`
+} else if (golesB > golesA) {
+  ganador.innerHTML =`🏆 Ganador: ${equipoB}`;
+  } else {
+    ganador.innerHTML = "🤝 ¡Empate!";
   }
