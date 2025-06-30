@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(75, 72, 121);
+    background-color: rgb(38, 35, 82);
 }
 h1{
     text-align: center;
@@ -21,6 +21,12 @@ h1{
 }
 
 .ganador{    
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-size: 40px;
+    font-style: bold;}
+
+.goles{
     text-align: center;
     color: rgb(3, 0, 0);
     font-size: 40px;

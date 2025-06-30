@@ -147,7 +147,9 @@ function seleccionarDosEquiposAleatorios(lista) {
 }
 
 const [equipoA, equipoB] = seleccionarDosEquiposAleatorios(TodosLosEquipos);
+let partido = document.getElementById("partido");
 console.log(`⚽ Partido entre: ${equipoA} vs ${equipoB}`);
+partido.innerHTML =`⚽ Partido entre: ${equipoA} vs ${equipoB}`
 
 // Marcador inicial
 let golesA = 0;
@@ -158,13 +160,11 @@ let golesB = 0;
 // Duración del partido en "turnos"
 const duracion = 90; //90 minutos
 
-let partido = document.getElementById("partido");
-
-partido.innerHTML =`⚽ Partido entre: ${equipoA} vs ${equipoB}`
 
 
 
 // Función para simular si un equipo marca un gol en un turno
+const golesequipos = document.getElementById("goles");
 function intentoGol() {
   // Probabilidad simple: 5% de marcar gol cada turno
   return Math.random() < 0.05;
@@ -177,12 +177,14 @@ function intentoGol() {
   if (intentoGol()) {
     golesA++;
     console.log(`¡Gol para ${equipoA} en el minuto ${minuto}!`);
+    golesequipos.innerHTML += `⚽ ¡Gol para ${equipoA} en el minuto ${minuto}!`;
   }
   
   // Equipo B intenta
   if (intentoGol()) {
     golesB++;
     console.log(`¡Gol para ${equipoB} en el minuto ${minuto}!`);
+    golesequipos.innerHTML += `⚽ ¡Gol para ${equipoB} en el minuto ${minuto}!`;
   }
 
 }
@@ -196,19 +198,16 @@ console.log(`Resultado final: ${equipoA} ${golesA} - ${golesB} ${equipoB}`);
 let resultadofinal = document.getElementById("resultado");
 resultadofinal.innerHTML = `Resultado final: ${equipoA} ${golesA} - ${golesB} ${equipoB}`
 
-if (golesA > golesB) {
-    console.log(`🏆 Ganador: ${equipoA}`);
-  } else if (golesB > golesA) {
-    console.log(`🏆 Ganador: ${equipoB}`);
-  } else {
-    console.log("🤝 ¡Empate!");
-  }
 
 let ganador = document.getElementById("ganador");
-if(golesA > golesB) {
-  ganador.innerHTML = `🏆 Ganador: ${equipoA}`
-} else if (golesB > golesA) {
-  ganador.innerHTML =`🏆 Ganador: ${equipoB}`;
+if (golesA > golesB) {
+    console.log(`🏆 Ganador: ${equipoA}`);
+    ganador.innerHTML = `🏆 Ganador: ${equipoA}`;
+  } else if (golesB > golesA) {
+    console.log(`🏆 Ganador: ${equipoB}`);
+    ganador.innerHTML =`🏆 Ganador: ${equipoB}`;
   } else {
+    console.log("🤝 ¡Empate!");
     ganador.innerHTML = "🤝 ¡Empate!";
   }
+
