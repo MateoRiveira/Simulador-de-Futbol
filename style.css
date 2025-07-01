@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(38, 35, 82);
+    background-color: rgb(49, 45, 114);
 }
 h1{
     text-align: center;
@@ -31,3 +31,10 @@ h1{
     color: rgb(3, 0, 0);
     font-size: 40px;
     font-style: bold;}
+
+.historial{
+    text-align: center;
+    color: rgb(3, 0, 0);
+    font-size: 40px;
+    font-style: bold;
+}
