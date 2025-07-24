@@ -16,10 +16,10 @@ Este es un **simulador interactivo de partidos de fútbol** desarrollado con **H
 
 - HTML5
 - CSS3
-- JavaScript (puro)
+- JavaScript 
 - LocalStorage
-- SweetAlert2 (para alertas personalizadas)
-- API externa (opcional, para pruebas con datos reales)
+- SweetAlert2 
+- API externa 
 
 ---
 
